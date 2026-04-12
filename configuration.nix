@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -18,9 +18,7 @@
       ./12-pkg-hyprland.nix
       ./13-pkg-lang.nix
       ./14-pkg-lsp.nix
-      ./90-git.nix
-      ./91-mercurial.nix
-      ./92-jj.nix
+      ./15-pkg-vcs.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
