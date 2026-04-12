@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 	environment.systemPackages = with pkgs; [
@@ -10,7 +10,7 @@
 	    NIXOS_OZONE_WL = "1";
 	    HYPRLAND_CONFIG = "/etc/hypr/hyprland.conf";
 	};
-	
+
 	programs.hyprland.enable = true;
 
   environment.etc."hypr/hyprland.conf".text = ''
