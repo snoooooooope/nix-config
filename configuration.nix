@@ -16,6 +16,8 @@
       ./10-pkg-shell.nix
       ./11-pkg-base.nix
       ./12-pkg-hyprland.nix
+      ./13-pkg-lang.nix
+      ./14-pkg-lsp.nix
       ./90-git.nix
       ./91-mercurial.nix
       ./92-jj.nix
