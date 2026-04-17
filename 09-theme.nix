@@ -4,14 +4,12 @@
   programs.dconf.enable = true;
   fonts.packages = with pkgs; [
    nerd-fonts.symbols-only
-   nerd-fonts.caskaydia-mono
-   nerd-fonts.caskaydia-cove
  ];
 
   environment.systemPackages = with pkgs; [
+    nwg-look
     kdePackages.breeze-gtk
     rose-pine-icon-theme
-    rose-pine-hyprcursor
   ];
 
   environment.sessionVariables = {

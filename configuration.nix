@@ -16,16 +16,26 @@
       ./10-pkg-shell.nix
       ./11-pkg-base.nix
       ./12-pkg-hyprland.nix
-      ./13-pkg-lang.nix
       ./14-pkg-lsp.nix
       ./15-pkg-vcs.nix
+      ./19-pkg-overlay.nix
     ];
-
+    
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  nixpkgs.config.allowUnfree = true;
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.initrd.systemd.enable = true;
+  boot.initrd.kernelModules = [ "lz4" ];
+  boot.kernelParams = [
+    "zswap.enabled=1"
+    "zswap.compressor=lz4"
+    "zswap.max_pool_percent=20"
+    "zswap.shrinker_enabled=1"
+  ];
+  
   nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" ];
   # Copy the NixOS configuration file and link it from the resulting system

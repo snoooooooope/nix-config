@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     gcc
+    wget
     helix
     bat
     btop
@@ -10,10 +11,10 @@
     ouch
     starship
     ripgrep
+    ffmpeg
+    zen-browser
   ];
 
-  programs.firefox.enable = true;
-  
   programs.foot = {
     enable = true;
     enableZshIntegration = true;

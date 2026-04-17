@@ -4,13 +4,13 @@
 	environment.systemPackages = with pkgs; [
 		fuzzel
 		wl-clipboard
+		rose-pine-hyprcursor
 	];
 	
 	environment.sessionVariables = {
 	    NIXOS_OZONE_WL = "1";
 	    HYPRLAND_CONFIG = "/etc/hypr/hyprland.conf";
 	};
-
 	programs.hyprland.enable = true;
 
   environment.etc."hypr/hyprland.conf".text = ''
