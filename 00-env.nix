@@ -13,5 +13,7 @@
   networking.hostName = "nixos";
   environment.variables = {
     EDITOR = "hx";
+    PAGER = "gum pager";
+    MANPAGER = "gum pager";
   };
 }

@@ -5,6 +5,7 @@
     gcc
     wget
     helix
+    gum
     bat
     btop
     fastfetch
